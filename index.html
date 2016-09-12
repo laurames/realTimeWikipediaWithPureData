@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Real time wikipedia edits player</title>
+  <meta name="description" content="Checking real time edits in wikipedia and sending them to pure data for sound">
+  <meta name="author" content="Laura Meskanen-Kundu">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+  <div id="realTimeFeed">
+    <pre id="feed" class="mw-feed"></pre>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
