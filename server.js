@@ -5,6 +5,7 @@ var port = require('port');
 var pd = port({
 	'read': 8005, // [netsend]
 	'write': 8006, // [netreceive]
+  'encoding': 'utf-8',
 	'flags': {
 		'noprefs': true, // '-stderr', '-nogui',
 		'open': 'wikiConnect.pd'
@@ -29,7 +30,8 @@ net.createServer(function(sock) {
   // Add a 'data' event handler to this instance of socket
   sock.on('data', function(data) {
     console.log(data.toString('utf-8'));
-    pd.write('a message to pd;\n');
+    //pd.write('a message to pd;\n');
+    pd.write(data.toString('utf-8').charAt(0) + ';\n');
   });
 
   // Add a 'close' event handler to this instance of socket

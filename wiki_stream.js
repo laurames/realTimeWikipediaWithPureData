@@ -13,7 +13,8 @@ const client = net.connect({port: 3000}, () => {
 
 socket.on( 'connect', function () {
   console.log('######## Socket connected');
-  socket.emit( 'subscribe', '*' );
+  //socket.emit( 'subscribe', '*' );
+  socket.emit( 'subscribe', 'en.wikipedia.org' );
 } );
 
 //full RCFeed properties can be found at: https://www.mediawiki.org/wiki/Manual:RCFeed#Properties
