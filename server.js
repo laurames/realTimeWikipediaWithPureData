@@ -8,7 +8,7 @@ var pd = port({
   'encoding': 'utf-8',
 	'flags': {
 		'noprefs': true, // '-stderr', '-nogui',
-		'open': 'wikiConnect.pd'
+    'open': 'patches/000-introduction.pd' //'open': 'wikiConnect.pd'
 	}
 })
 .on('stderr', function(buffer){
