@@ -2,7 +2,19 @@
   "name": "real-time-wikipedia-updates",
   "version": "0.0.1",
   "description": "real time wikipedia updates and first socket.io app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laurames/realTimeWikipediaWithPureData.git"
+  },
+  "keywords": [],
+  "author": "laura meskanen-kundu",
+  "license" : "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/laurames/realTimeWikipediaWithPureData.git/issues"
+  },
+  "homepage": "https://github.com/laurames/realTimeWikipediaWithPureData.git",
   "dependencies": {
+    "express": "^4.14.0",
     "socket.io": "^1.4.8"
   }
 }
