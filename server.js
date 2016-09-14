@@ -8,18 +8,18 @@ var PORT = 13001;
 // The sock object the callback function receives UNIQUE for each connection
 net.createServer(function(sock) {
 
-    // We have a connection - a socket object is assigned to the connection automatically
-    console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
+  // We have a connection - a socket object is assigned to the connection automatically
+  console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
 
-    // Add a 'data' event handler to this instance of socket
-    sock.on('data', function(data) {
-        console.log(data.toString('utf-8'));
-    });
+  // Add a 'data' event handler to this instance of socket
+  sock.on('data', function(data) {
+    console.log(data.toString('utf-8'));
+  });
 
-    // Add a 'close' event handler to this instance of socket
-    sock.on('close', function(data) {
-        console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
-    });
+  // Add a 'close' event handler to this instance of socket
+  sock.on('close', function(data) {
+    console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
+  });
 
 }).listen(PORT, HOST);
 
