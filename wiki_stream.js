@@ -1,15 +1,14 @@
 'use strict';
 
 var io = require( 'socket.io-client' );
-var socket = io.connect( 'https://stream.wikimedia.org/rc', {
-'sync disconnect on unload': true });
+var socket = io.connect( 'https://stream.wikimedia.org/rc' ); //, {'sync disconnect on unload': true }
 console.log('check if connected to stream: ', socket.connected);
 
 const net = require('net');
 
-const client = net.connect({port: 13001}, () => {
+const client = net.connect({port: 3000}, () => {
   // 'connect' listener
-  console.log('Connected to server at 13001');
+  console.log('Connected to server at 3000');
 });
 
 socket.on( 'connect', function () {

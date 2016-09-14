@@ -1,0 +1,17 @@
+#N canvas 674 296 450 300 10;
+#X declare -lib cyclone;
+#X obj 207 3 import cyclone;
+#X obj 168 60 spell;
+#X obj 169 88 iter;
+#X floatatom 173 116 5 0 0 0 - - -;
+#X msg 131 30 a;
+#X msg 167 29 A;
+#X obj 275 93 route hello;
+#X msg 269 61 hello helsinki;
+#X obj 281 175 print;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
