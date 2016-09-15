@@ -8,7 +8,7 @@ var pd = port({
   'encoding': 'utf-8',
 	'flags': {
 		'noprefs': true, // '-stderr', '-nogui',
-    'open': 'patches/main.pd' //'open': 'wikiConnect.pd'
+    'open': 'patches/main.pd' //opens the file
 	}
 })
 .on('stderr', function(buffer){
@@ -30,8 +30,8 @@ net.createServer(function(sock) {
   // Add a 'data' event handler to this instance of socket
   sock.on('data', function(data) {
     console.log(data.toString('utf-8'));
-    //pd.write('a message to pd;\n');
-    pd.write(data.toString('utf-8').charAt(0) + ';\n');
+    //pd.write(data.toString('utf-8').charAt(0) + ';\n');
+		pd.write(data.toString('utf-8').charAt(0) + ' ' + data.toString('utf-8').charAt(1) + ';\n');
   });
 
   // Add a 'close' event handler to this instance of socket

@@ -41,7 +41,7 @@
 #X obj -18934 377 st-shaper_laura01;
 #X obj -18943 490 mono-highpass_laura01;
 #X obj -19499 252 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 7600 1;
+-262144 -1 -1 6700 1;
 #X obj -19606 260 f;
 #X obj -19564 260 + 1;
 #X obj -19553 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -60,11 +60,13 @@
 #X obj -19517 581 voice 2;
 #X obj -19457 581 voice 3;
 #X obj -19387 581 voice 4;
+#X obj -19387 110 print;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
 #X connect 6 0 9 0;
+#X connect 6 0 55 0;
 #X connect 6 1 5 0;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
