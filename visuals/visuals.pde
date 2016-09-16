@@ -5,7 +5,7 @@ OscP5 oscP5;
 NetAddress myRemoteLocation;
 
 void setup() {
-  size(500,400);
+  size(640,360,P2D);
   frameRate(25);
   /* start oscP5, listening for incoming messages at port 12000 */
   oscP5 = new OscP5(this,8007);
@@ -21,7 +21,14 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  background(51);
+  if ((mouseX > 40) && (mouseX < 80) &&
+    (mouseY > 20) && (mouseY < 80)) {
+    fill(255);
+  } else {
+    fill(0);
+  }
+  rect(40, 20, 40, 60);
 }
 
 /* incoming osc message are forwarded to the oscEvent method. */
