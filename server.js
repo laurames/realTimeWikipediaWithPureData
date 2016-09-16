@@ -30,8 +30,8 @@ net.createServer(function(sock) {
   // Add a 'data' event handler to this instance of socket
   sock.on('data', function(data) {
     console.log(data.toString('utf-8'));
-    //pd.write(data.toString('utf-8').charAt(0) + ';\n');
-		pd.write(data.toString('utf-8').charAt(0) + ' ' + data.toString('utf-8').charAt(1) + ';\n');
+    pd.write(data.toString('utf-8').charAt(0) + ';\n');
+		//pd.write(data.toString('utf-8').charAt(0) + ' ' + data.toString('utf-8').charAt(1) + ';\n');
   });
 
   // Add a 'close' event handler to this instance of socket
